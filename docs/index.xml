@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin>
+  <information>
+    <name>Whiteground (Red)</name>
+    <version>0.2</version>
+    <description>
+      <![CDATA[
+      ]]>
+    </description>
+    <license>
+      <![CDATA[자유롭게 수정하여 사용하실 수 있습니다. 단, 제작자 표기는 유지하셔야 하며, 수정한 스킨의 재배포 시에는 원 제작자에게 알려주셔야 합니다. 이 스킨은 용의자(http://yongja.tistory.com)님의 Plain 스킨을 수정하여 만든 스킨입니다.]]>
+    </license>
+  </information>
+  <author>
+    <name>Lawlite</name>
+    <homepage>http://lawlite.tistory.com</homepage>
+    <email>lawlite9@gmail.com</email>
+  </author>
+  <default>
+    <recentEntries>5</recentEntries>
+    <recentComments>5</recentComments>
+    <recentTrackbacks>5</recentTrackbacks>
+    <itemsOnGuestbook>5</itemsOnGuestbook>
+    <tagsInCloud>30</tagsInCloud>
+    <sortInCloud>1</sortInCloud>
+    <expandComment>1</expandComment>
+    <expandTrackback>0</expandTrackback>
+    <lengthOfRecentNotice>30</lengthOfRecentNotice>
+    <lengthOfRecentEntry>31</lengthOfRecentEntry>
+    <lengthOfRecentComment>37</lengthOfRecentComment>
+    <lengthOfRecentTrackback>35</lengthOfRecentTrackback>
+    <lengthOfLink>30</lengthOfLink>
+    <entriesOnPage>1</entriesOnPage>
+    <entriesOnList>30</entriesOnList>
+    <showListOnCategory>1</showListOnCategory>
+    <showListOnArchive>1</showListOnArchive>
+    <commentMessage>
+    </commentMessage>
+    <trackbackMessage>
+    </trackbackMessage>
+    <contentWidth>660</contentWidth>
+  </default>
+</skin>

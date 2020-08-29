@@ -1,0 +1,21 @@
+doctype html
+
+html(lang='ko')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+
+    title [##_page_title_##]
+
+    link(rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosanskr.css")
+
+    style.
+      * {
+        padding: 0px;
+        margin: 0px;
+        font-family: 'Noto Sans KR', sans-serif;
+      }
+      a { pointer-events: initial; }
+
+  body(id='[##_body_id_##]')
+    block TIDORY
