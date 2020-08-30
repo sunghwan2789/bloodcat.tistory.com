@@ -1,0 +1,39 @@
+s_list: #searchList
+  h3 '[##_list_conform_##]'에 해당되는 글 [##_list_count_##]건
+  ol
+    s_list_rep: li
+      a(href='[##_list_rep_link_##]')
+        | [##_list_rep_title_##]
+        |
+        span.cnt [##_list_rep_rp_cnt_##]
+        |
+        |
+        span.date [##_list_rep_regdate_##]
+
+style(media='screen').
+  #searchList{
+  }
+  #searchList ol, #searchRplist ol{
+    margin:15px 0;
+    padding:15px;
+    border:1px dotted #DDD;
+    list-style:decimal inside;
+  }
+  #searchList ol li, #searchRplist ol li{
+    padding:5px 0;
+  }
+  #searchList .cnt, #searchRplist .cnt{
+    font:11px 'Trebuchet MS';
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#FF6600;
+  }
+  #searchList .date, #searchRplist .date{
+    font:11px 'Trebuchet MS';
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#999;
+  }
+  #searchRplist .name{
+    color:#999;
+  }

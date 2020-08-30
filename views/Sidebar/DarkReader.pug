@@ -1,0 +1,43 @@
+s_sidebar_element
+  //다크모드
+  #darkmode.module
+    h3 Dark Reader
+    noscript 이 기능을 사용하려면 자바스크립트를 허용하세요.
+    select#darkreader-mode(style='width:100%;text-align:center')
+      option(value='auto') 시스템 설정을 따름
+      option(value='enable') 다크 모드 켜기
+      option(value='disable') 다크 모드 끄기
+
+  script(src='https://unpkg.com/darkreader@4.9.16/darkreader.js')
+  script.
+    (function (select, key, modes) {
+      DarkReader.setFetchMethod(window.fetch);
+
+      function getMode() {
+        const currentMode = localStorage[key];
+        if (currentMode && modes.indexOf(currentMode) > -1) {
+          return currentMode;
+        } else {
+          return 'auto';
+        }
+      }
+
+      function setMode(mode) {
+        localStorage[key] = mode;
+      }
+
+      function update() {
+        DarkReader[getMode()]();
+      }
+
+      select.value = getMode();
+      update();
+
+      select.addEventListener('change', e => {
+        setMode(e.target.value);
+        update();
+      });
+
+    })(document.querySelector('#darkreader-mode'), 'dark-reader-mode', 'auto enable disable');
+
+style(media='screen').

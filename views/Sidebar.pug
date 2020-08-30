@@ -1,0 +1,38 @@
+section#sidebar
+  s_sidebar
+    include Sidebar/BlogDescription
+    include Sidebar/Notice
+    include Sidebar/Category
+    include Sidebar/RecentPost
+    include Sidebar/RecentComment
+    include Sidebar/RecentTrackback
+    include Sidebar/Tagbox
+    include Sidebar/Archive
+    include Sidebar/Link
+    include Sidebar/Counter
+    include Sidebar/DarkReader
+  include Sidebar/Search
+
+
+style(media='screen').
+  #sidebar{
+    padding:15px 0;
+    width:240px;
+    float:right;
+    background-color:#fff;
+  }
+
+  #sidebar .module{
+    margin-bottom:15px;
+  }
+  #sidebar h3{
+    padding:3px 5px;
+    font:16px 'Noto Sans DemiLight',AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;
+    font-weight:bold;
+    border-bottom:1px solid #ddd;
+    background-color:#fff;
+    text-transform:uppercase;
+    letter-spacing:-1px;
+    color:#e01419;
+    text-shadow: 1px 1px #aaa;
+  }

@@ -1,0 +1,25 @@
+.actionTrail.clearfix
+  a.bt(href='#rp' onclick='[##_article_rep_rp_link_##]')
+    s_rp_count
+      | 댓글
+      |
+      span.cnt ([##_article_rep_rp_cnt_##])
+  //- a.bt(href='#tb' onclick='[##_article_rep_tb_link_##]')
+  //-   s_tb_count
+  //-     | 엮인글
+  //-     |
+  //-     span.cnt ([##_article_rep_tb_cnt_##])
+
+style(media='screen').
+  .actionTrail{
+    padding-bottom:10px;
+    width:/*@post-width:10=*/660px/*@*/;
+    border-bottom:1px solid #DDD;
+    text-align:right;
+  }
+  .actionTrail .cnt{
+    font:11px 'Trebuchet MS';
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#FF6600;
+  }

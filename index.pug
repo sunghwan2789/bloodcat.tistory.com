@@ -2,14 +2,17 @@ extends app
 
 block TIDORY
   s_t3
-    #__tidory
+    #container
       include views/Header
+      include views/Main
+      include views/Sidebar
+      include views/Footer
 
-  style.
-    #__tidory {
-      height: 100vh;
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      text-align: center;
-    }
+  style(media='screen').
+    #container{
+      margin:0 auto;
+      padding:0 25px;
+      width:/*@post-width:280=*/930px/*@*/;
+      background-color:#fff;
+      text-align:left;
+      }

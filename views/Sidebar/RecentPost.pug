@@ -1,0 +1,30 @@
+s_sidebar_element
+  //최근에 올라온 글
+  #recentPost.module
+    h3 Recent Post
+    ul
+      s_rctps_rep: li
+        a(href='[##_rctps_rep_link_##]') [##_rctps_rep_title_##]
+        |
+        |
+        span.cnt [##_rctps_rep_rp_cnt_##]
+
+style(media='screen').
+  #sidebar .cnt, .c_cnt{
+    font:11px 'Trebuchet MS';
+    text-transform:uppercase;
+    letter-spacing:1px;
+  color:#777;
+  }
+
+  #sidebar ul li{
+    padding:5px 0 0 7px;
+  }
+
+  #sidebar ul li a:hover{
+  color:#999;
+  }
+
+  #recentPost ul li:hover, #recentComment ul li:hover, #recentTrackback ul li:hover, #archive ul li:hover, #link ul li:hover{
+    background:url(./images/control-000-small.png) no-repeat -6px 6px;
+  }

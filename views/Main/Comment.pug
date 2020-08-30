@@ -1,0 +1,205 @@
+s_rp: .comment
+  .commentList
+    s_rp_container: ol
+      s_rp_rep: li(id='[##_rp_rep_id_##]')
+        div(class='[##_rp_rep_class_##]')
+          .name [##_rp_rep_name_##]
+          .date
+            a(href='[##_rp_rep_link_##]') [##_rp_rep_date_##]
+            |
+            |
+            button(type='button' onclick='[##_rp_rep_onclick_delete_##]') [수정/삭제]
+            |
+            |
+            button(type='button' onclick='[##_rp_rep_onclick_reply_##]') [대댓글 달기]
+          .reply [##_rp_rep_desc_##]
+        s_rp2_container: ul
+          s_rp2_rep: li(id='[##_rp_rep_id_##]')
+            div(class='[##_rp_rep_class_##]')
+              .name [##_rp_rep_name_##]
+              .date
+                a(href='[##_rp_rep_link_##]') [##_rp_rep_date_##]
+                |
+                |
+                button(type='button' onclick='[##_rp_rep_onclick_delete_##]') [수정/삭제]
+              .reply [##_rp_rep_desc_##]
+  s_rp_input_form
+    .commentWrite
+      h3 댓글 달기
+
+      s_rp_member: s_rp_guest
+        p.
+          <input type="text" name="[##_rp_input_name_##]" value="[##_guest_name_##]" class="input"
+            onfocus="this.className='input_on'" onblur="this.className='input'" title="이름" />
+          Name <span class="point">__</span>
+        p.
+          <input type="password" maxlength="8" name="[##_rp_input_password_##]" value="" class="input"
+            onfocus="this.className='input_on'" onblur="this.className='input'" title="비밀번호" />
+          Password <span class="point">__</span>
+        p.
+          <input type="text" name="[##_rp_input_homepage_##]" value="[##_guest_homepage_##]"
+            class="input" onfocus="this.className='input_on'" onblur="this.className='input'"
+            title="링크" />
+          Link (Your Website)
+      p.
+        <textarea name="[##_rp_input_comment_##]" rows="10" cols="50" class="textarea"
+          onfocus="this.className='textarea_on'" onblur="this.className='textarea'"
+          title="댓글내용"></textarea>
+
+      a.submit(onclick='[##_rp_onclick_submit_##]') Comment
+
+      p.secretWrap
+        label
+          input.checkbox(
+            type='checkbox'
+            name='secret'
+            title='비밀글 체크'
+          )
+          |
+          | SECRET | 비밀글로 남기기
+
+style(media='screen').
+  .comment{
+    text-align:justify;
+    word-break: keep-all;
+  }
+
+  .commentList ol{
+    margin-top:10px;
+  }
+  .commentList ol li{
+    margin-top:10px;
+    border-bottom:1px dotted #DDD;
+  }
+  .commentList ol li img{
+    vertical-align:middle;
+    padding:2px;
+    width:16px;
+    height:16px;
+    border:1px solid #DDD;
+    background-color:#FFF;
+  }
+  .commentList ol li .name{
+    margin-bottom:5px;
+    font:16px 'Noto Sans DemiLight',AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;
+  color:#2290ff;
+  }
+  .commentList ol li .name a{
+    margin-bottom:5px;
+    font:16px 'Noto Sans DemiLight',AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;
+  color:#1568bc;
+  }
+  .commentList ol li .replyFrom{
+    font:11px 'Trebuchet MS';
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#999;
+  }
+  .commentList ol li .date{
+    font:11px 'Trebuchet MS';
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#999;
+  }
+  .commentList ol li .date a,
+  .commentList ol li .date button {
+    color:#999;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    background: none;
+  }
+  .commentList ol li .date a:hover,
+  .commentList ol li .date button:hover {
+    text-decoration:underline;
+  }
+  .commentList ol li .reply{
+    margin:5px 0;
+    line-height:140%;
+  }
+  .commentList ol li .reply img{
+    padding:0;
+    margin:0;
+    width:auto;
+    height:auto;
+    border:none;
+    background:none;
+  }
+  .commentList ol li ul{
+    list-style:none outside;
+    margin-left:50px;
+    margin-bottom:0;
+  }
+  .commentList ol li ul li{
+    padding:10px;
+    margin:10px 0;
+    background-color:#F7F7F7;
+    border:1px solid #DDD;
+  }
+
+  .commentWrite{
+    margin-top:10px;
+    margin-bottom:20px;
+    padding:15px;
+    border:1px dotted #DDD;
+    font:11px 'Noto Sans DemiLight',AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:1px;
+  }
+  .commentWrite h3, #nonEntry .commentWrite h3{
+    margin-bottom:10px;
+    font:16px 'Noto Sans DemiLight',AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;
+  }
+  .commentWrite p{
+    margin:0 0 10px 0;
+  }
+  .commentWrite .point{
+  width:16px;
+  height:16px;
+  background:url(./images/tick-small.png) no-repeat;
+  background-position:-3px 0px;
+  color:#fff;
+  }
+  .commentWrite .input{
+    width:150px;
+    height:18px;
+    border:1px solid #DDD;
+    background:#F7F7F7;
+  }
+  .commentWrite .input_on{
+    width:150px;
+    height:18px;
+    border:1px solid #FF6600;
+    background:#F7F7F7;
+  }
+  .commentWrite .textarea{
+    width:99%;
+    height:100px;
+    border:1px solid #DDD;
+    background:#F7F7F7;
+  }
+  .commentWrite .textarea_on{
+    width:99%;
+    height:100px;
+    border:1px solid #FF6600;
+    background:#F7F7F7;
+  }
+  .commentWrite a.submit{
+    display:block;
+    width:125px;
+    height:25px;
+    background:url(./images/comment.png) no-repeat 0 0;
+    text-indent:-9999px;
+    padding-bottom:2px;
+    cursor:pointer;
+    float:right;
+  }
+
+  .commentWrite a.submit:hover{
+    background-position:0px -25px;
+  }
+
+  .commentWrite p.secretWrap{
+    margin-bottom:0;
+    font:11px 'Noto Sans DemiLight',AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;
+  }

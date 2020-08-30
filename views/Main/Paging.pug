@@ -1,0 +1,50 @@
+s_paging
+  #paging.clearfix
+    a([##_prev_page_##] class='prev'): span Prev
+    a([##_next_page_##] class='next'): span Next
+    p.numbox
+      s_paging_req
+        a([##_paging_req_link_##] class='num') [##_paging_rep_link_num_##]
+
+style(media='screen').
+  #paging{
+    width:/*@post-width:10=*/660px/*@*/;
+    text-align:center;
+    padding-top:10px;
+    margin:10px 0;
+    font:11px 'Trebuchet MS';
+    text-transform:uppercase;
+  }
+  #paging .selected{
+    color:#FF9900;
+  }
+  #paging .numbox{
+  }
+
+  #paging a.num{
+    padding:2px 6px;
+    border:1px solid #ddd;
+  }
+  #paging a:hover.num{
+    border:1px solid #ff9900;
+  }
+  #paging a.prev{
+    display:block;
+    width:80px;
+    height:35px;
+    background:url(./images/red-prev.png) no-repeat;
+    float:left;
+  }
+  #paging a.next{
+    display:block;
+    width:80px;
+    height:35px;
+    background:url(./images/red-next.png) no-repeat;
+    float:right;
+  }
+  #paging a:hover.prev, #paging a:hover.next{
+    background-position:0 -35px;
+  }
+  #paging a.prev span, #paging a.next span{
+    display:none;
+  }

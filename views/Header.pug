@@ -1,3 +1,17 @@
-header
+header#header
   include Header/Title
-  include Header/Navigation
+  include Header/Menu
+
+style(media='screen').
+  #header{
+    padding-top:80px;
+    width:/*@post-width:280=*/930px/*@*/;
+    height:/*@title-height:-80=*/150px/*@*/;
+    position:relative;
+    text-align:left;
+    border-bottom:1px solid #DDD;
+    background-image:/*@title-background-image=*/none/*@*/;
+    background-repeat:/*@title-background-image-repeat=*/repeat/*@*/;
+    background-position:/*@title-background-image-position=*/left top/*@*/;
+    background-color:/*@title-background-color=*/transparent/*@*/;
+  }

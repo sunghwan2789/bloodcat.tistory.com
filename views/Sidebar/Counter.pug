@@ -1,0 +1,49 @@
+s_sidebar_element
+  //카운터
+  #counter
+    .total
+      | Total
+      |
+      span.counterNum [##_count_total_##]
+    .anoday
+      span.today
+        | Today
+        |
+        span.counterNum2 [##_count_today_##]
+      |
+      |
+      span.yesterday
+        | Yesterday
+        |
+        span.counterNum3 [##_count_yesterday_##]
+
+style(media='screen').
+  #counter{
+    padding:5px;
+    margin-bottom:15px;
+    border-top:1px solid #DDD;
+    border-bottom:1px solid #DDD;
+    background-color:#fff;
+    font:11px 'Trebuchet MS';
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#333;
+  }
+  #counter .total{
+    font:13px 'Trebuchet MS';
+  }
+  #counter .anoday, #counter .anoday2{
+    color:#777;
+    margin-left:2px;
+    margin-top:2px;
+  }
+
+  #counter .counterNum{
+    color:#e01419;
+  }
+  #counter .counterNum2{
+    color:#3a7eeb;
+  }
+  #counter .counterNum3{
+    color:#338543;
+  }

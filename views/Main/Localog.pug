@@ -1,0 +1,41 @@
+s_local: #localog
+  h3
+  .localogBody
+    s_local_spot_rep
+      .spot(style='margin-left: [##_local_spot_depth_##]px')
+        span.localspot [##_local_spot_##]
+    s_local_info_rep
+      .info(style='margin-left: [##_local_info_depth_##]px')
+        a(href='[##_local_info_link_##]') [##_local_info_title_##]
+
+style(media='screen').
+  #localog{
+  }
+
+  #localog h3{
+  width:250px;
+  height:21px;
+  background:url(./images/bannerl.png) no-repeat;
+  }
+
+  #localog .localogBody{
+    margin:15px 0;
+    padding:15px;
+    border:1px dotted #DDD;
+  }
+  #localog .spot{
+    padding:5px 0 5px 7px;
+    background:url(./images/flag.png) no-repeat -5px 5px;
+  }
+  #localog .localspot{
+    margin-left:5px;
+  }
+  #localog .info{
+    padding:5px 0;
+  }
+  #localog .info a{
+    color:#00368f;
+  }
+  #localog .info a:hover{
+    text-decoration:underline;
+  }

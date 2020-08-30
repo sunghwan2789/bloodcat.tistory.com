@@ -1,0 +1,23 @@
+s_sidebar_element
+  //최근에 달린 댓글
+  #recentComment.module
+    h3 Recent Comment
+    ul
+      s_rctrp_rep: li
+        a(href='[##_rctrp_rep_link_##]') [##_rctrp_rep_desc_##]
+        |
+        |
+        .name
+          | // [##_rctrp_rep_name_##]
+          |
+          span.date [##_rctrp_rep_time_##]
+
+style(media='screen').
+  #sidebar .name{
+    color:#999;
+  }
+  #sidebar .date{
+    font:11px 'Trebuchet MS';
+    text-transform:uppercase;
+    letter-spacing:1px;
+  }

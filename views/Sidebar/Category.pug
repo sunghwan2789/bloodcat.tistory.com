@@ -1,0 +1,45 @@
+s_sidebar_element
+  //카테고리
+  #category.module
+    h3 Category
+    .categoryBody [##_category_list_##]
+
+style(media='screen').
+  #sidebar ul li #category ul{
+  }
+  #sidebar ul li #category ul li ul{
+    padding:0;
+  }
+  #sidebar ul li #category ul li{
+    padding:0;
+    border:none;
+  }
+  #category ul li a{
+    display:block;
+    padding:5px 0 0px 20px;
+    height:18px;
+    background:url(./images/folder-horizontal.png) no-repeat 0 7px;
+  }
+  #category ul li a:hover{
+    padding:5px 0 0px 20px;
+    background:url(./images/folder-horizontal-open.png) no-repeat 0 7px;
+  }
+
+  #category ul li ul li a{
+    border-top:1px solid #EFEFEF;
+  }
+  #category ul li ul li ul li a{
+    padding-left:20px;
+    background:none !important;
+    border:none;
+  }
+  #sidebar li:hover #category ul li ul li ul li a{
+    padding-left:20px;
+    background:none !important;
+  }
+
+  #category .categoryBody{
+  }
+
+  .ib			{cursor:pointer;}
+  .branch3	{cursor:pointer;}

@@ -1,0 +1,188 @@
+article
+  header.titleWrap
+    h2: a#articleTitle(href='[##_article_rep_link_##]') [##_article_rep_title_##]
+    span.info
+      | Posted at [##_article_rep_date_##] |
+      |
+      | Posted in
+      |
+      a.category(href='[##_article_rep_category_link_##]') [##_article_rep_category_##]
+    s_ad_div: .admin
+      a(href='[##_s_ad_m_link_##]') 수정
+      |
+      | :
+      |
+      a(href='#' onclick='[##_s_ad_m_onclick_##]') 수정(새창)
+      |
+      | | ([##_s_ad_s1_label_##]) →
+      |
+      a(href='#' onclick='[##_s_ad_s2_onclick_##]') [##_s_ad_s2_label_##]
+      |
+      | |
+      |
+      a(href='#' onclick='[##_s_ad_t_onclick_##]') 트랙백
+      |
+      | |
+      |
+      a(href='#' onclick='[##_s_ad_d_onclick_##]') 삭제
+
+  .article [##_article_rep_desc_##]
+
+  s_tag_label
+    .tagTrail
+      span.tagtext [##_tag_label_rep_##]
+
+style(media='screen').
+  #entry h2 a, #nonEntry h3, #nonEntry h3 a{
+    font-size:/*@post-title-font-size=*/28px/*@*/;
+    font-family:/*@post-title-font-family=*/'Noto Sans DemiLight',AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif/*@*/;
+    color:/*@post-title-color=*/#000/*@*/; letter-spacing:-2px;
+    font-weight:bold;
+    text-shadow: 1px 1px #ddd;
+  }
+
+  #entryNotice h3, #entryNotice h3 a{
+    font-size:/*@post-title-font-size=*/20px/*@*/;
+    font-family:/*@post-title-font-family=*/'Noto Sans DemiLight',AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif/*@*/;
+  }
+
+
+  .titleWrap .info{
+    font:11px 'Trebuchet MS';
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#999;
+  }
+  .titleWrap a.category{
+    font:12px 'Noto Sans DemiLight',AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif, Verdana, Arial, 'Trebuchet MS';
+  }
+  .titleWrap .admin{
+    padding:5px;
+    margin-top:15px;
+    border:1px solid #DDD;
+    background-color:#F7F7F7;
+  }
+
+
+  .article{
+    margin:15px 0;
+    font:/*@post-body-font-size=*/1rem/*@*/ /*@post-body-font-family=*/'Noto Sans DemiLight',AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif/*@*/;
+    line-height:180%;
+    color:/*@post-body-color=*/#333/*@*/;
+    text-align:justify;
+    word-break: keep-all;
+  }
+
+  .article a:link	{color:/*#00368f*/#0053db;}
+  .article a:visited	{color:/*#00368f*/#0053db;}
+  .article a:hover	{color:#cc0000;}
+
+  .article h1, .article h2, .article h3, .article h4 {
+    margin:revert;
+    padding:1.5em 0 .5em 0;
+    font-size: revert;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .article ul, .article ol{
+    margin: revert;
+    padding: revert;
+    list-style: revert;
+  }
+
+  .article .imageblock, .article .box{
+    padding:10px;
+    margin:10px 0;
+    border:1px solid #ddd;
+  }
+  .article figure, .article .imageblock, .article .imageslideblock{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .article .imageslideblock img {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  .article pre, .article .pre{
+    padding:10px;
+    margin:10px 0;
+    border:1px solid #ddd;
+    word-break:break-all;
+    line-height: 1.5;
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace !important;
+  }
+
+  .article code {
+    padding: 3px;
+    border:1px solid #ddd;
+    word-break:break-all;
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace !important;
+  }
+  .article pre code {
+    padding: revert;
+    border: revert;
+  }
+
+  .article table{
+    width:100%;
+    border-collapse:collapse;
+    font:11px Verdana;
+  }
+  .article th, .article td{
+    padding:5px 7px;
+    border:1px solid #c1c1c1;
+    text-align:center;
+  }
+  .article .gist td {
+    border: none;
+  }
+  .article th{
+    background-color:#e9e9e9;
+  }
+  .cap1{
+    margin:5px 0;
+    padding:0;
+    color:#888;
+  }
+  blockquote{
+    margin:15px 0;
+    padding:0 0 0 27px;
+    background:url(./images/bg_block.gif) no-repeat;
+    font-style:italic;
+  }
+  .moreless_fold span{
+    padding-left:17px;
+    background:url(./images/script--plus.png) no-repeat 0 0px;
+  }
+  .moreless_top span{
+    padding-left:17px;
+    background:url(./images/script--minus.png) no-repeat 0 0px;
+  }
+  .moreless_bottom span{
+    padding-right:17px;
+    background:url(./images/script--minus.png) no-repeat right 0px;
+  }
+  .moreless_fold{
+  }
+  .moreless_top{
+  }
+  .moreless_content{
+    padding:15px 0;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+  }
+  .moreless_bottom{
+    text-align:right;
+  }
+
+  div.footnotes { margin-top: 10px; border-top:#ccc 1px dashed;  }
+
+  .tagTrail{
+    margin-bottom:15px;
+    background:url(./images/tag--arrow.png) no-repeat;
+  }
+  .tagTrail .tagtext{
+  margin-left:20px;
+  }

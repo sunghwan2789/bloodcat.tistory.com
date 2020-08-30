@@ -1,0 +1,17 @@
+s_sidebar_element
+  //태그클라우드
+  #tagbox.module
+    h3 Tag Cloud
+    ul
+      s_random_tags: li
+        a(href='[##_tag_link_##]' class='[##_tag_class_##]') [##_tag_name_##]
+
+style(media='screen').
+  #tagbox ul					{ text-align:justify; line-height:200%; margin-top:5px; width:240px;}
+  #tagbox ul li 					{ display:inline; border:none; background:none; padding:0;}
+  #tagbox li a	{padding:3px;}
+  #tagbox li a.cloud1		{font-weight:bold;  background-color:#ffe9f6; color:#e55147;}
+  #tagbox li a.cloud2 	{background-color:#f4f4b9; color:#338543;}
+  #tagbox li a.cloud3		{color:#3a7eeb;}
+  #tagbox li a.cloud4		{color:#111;}
+  #tagbox li a.cloud5		{color:#777;}

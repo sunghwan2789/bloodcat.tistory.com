@@ -1,0 +1,35 @@
+s_article_protected: section.entryProtected
+  .titleWrap
+    h2: a#articleTitle(href='[##_article_rep_link_##]') [##_article_rep_title_##]
+    span.info
+      | Posted at <span class="date">[##_article_rep_date_##]</span>
+  .protectedWrapper
+    .article
+      p.hdProtected
+        | 보호되어 있는 글입니다. <br />
+        | 내용을 보시려면 비밀번호를 입력하세요.
+      p.
+        <input type="password" maxlength="16" id="[##_article_password_##]" name="[##_article_password_##]"
+          value="" onkeydown="if (event.keyCode == 13) [##_article_dissolve_##]" class="input"
+          onfocus="this.className='input_on'" onblur="this.className='input'" />
+        <a class="submit" onclick="[##_article_dissolve_##]">UNLOCK!</a>
+
+style(media='screen').
+  .entryProtected{
+  }
+
+  .entryProtected .input{
+    width:150px;
+    height:18px;
+    border:1px solid #DDD;
+  }
+  .entryProtected .input_on{
+    width:150px;
+    height:18px;
+    border:1px solid #FF6600;
+  }
+  .entryProtected .submit{
+    padding-bottom:2px;
+    border-bottom:1px dashed #DDD;
+    cursor:pointer;
+  }

@@ -29,5 +29,21 @@ module.exports = {
      * guestbook
      */
     mode: process.env['PREVIEW'] || 'index'
+  },
+
+  /**
+   * Webpack configuration extends
+   */
+  extends(webpackConfig) {
+    // TODO: scss support
+    // webpackConfig.module.rules = [
+    //   {
+    //     enforce: 'pre',
+    //     test: /.js$/,
+    //     exclude: /node_modules/,
+    //     loader: 'eslint-loader'
+    //   },
+    //   ...webpackConfig.module.rules
+    // ]
   }
 }

@@ -1,0 +1,23 @@
+s_sidebar_element
+  //최근에 받은 트랙백
+  #recentTrackback.module
+    h3 Recent Trackback
+    ul
+      s_rcttb_rep: li
+        a(href='[##_rcttb_rep_link_##]') [##_rcttb_rep_desc_##]
+        |
+        |
+        .name
+          | // [##_rcttb_rep_name_##]
+          |
+          span.date [##_rcttb_rep_time_##]
+
+style(media='screen').
+  #sidebar .name{
+    color:#999;
+  }
+  #sidebar .date{
+    font:11px 'Trebuchet MS';
+    text-transform:uppercase;
+    letter-spacing:1px;
+  }

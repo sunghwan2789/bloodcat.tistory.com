@@ -1,0 +1,62 @@
+//- -
+//-   const guidebook = [
+//-     { text:'시작하기',  href:'https://tidory.com/docs/get-started/' },
+//-     { text:'디렉토리',  href:'https://tidory.com/docs/directory/' },
+//-     { text:'템플릿',  href:'https://tidory.com/docs/template/' },
+//-     { text:'프레임워크',  href:'https://tidory.com/docs/framework/' },
+//-     { text:'빌드 및 배포',  href:'https://tidory.com/docs/distribute/' }
+//-   ];
+
+nav#menu
+  a(href='[##_blog_link_##]' title='처음으로' class='blog') Blog
+  //- a(href='[##_blog_link_##]notice' title='공지' class='notice') Notice
+  //- a(href='[##_taglog_link_##]' title='태그' class='tag') Tag Log
+  //- a(href='[##_localog_link_##]' title='지역로그' class='localog') Location Log
+  a(href='[##_guestbook_link_##]' title='방명록' class='guestbook') Guestbook
+  a(href='http://bloodcat.com') 블캣닷컴
+  .spacer
+  a(href='[##_owner_url_##]' title='관리자') Login
+  //- each guide in guidebook
+  //-   a(href=guide.href)= guide.text
+
+style(media='screen').
+  #menu{
+    width:/*@post-width:280=*/930px/*@*/;
+    height:40px;
+    font:14px/20px 'Noto Sans DemiLight',AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;
+    border-bottom:1px solid #ddd;
+    text-transform:uppercase;
+    letter-spacing:-1px;
+    padding-top: 5px;
+
+    background: #fff url("./images/red-menutops.png") repeat-x;
+    position:absolute;
+    top:0;left:0;
+
+    display: flex;
+  }
+  #menu a{
+    margin-top:5px;
+    padding:8px 15px;
+    text-shadow: 1px 1px #ddd;
+  }
+  #menu a:first-of-type {
+    margin-left: 30px;
+  }
+  #menu a:hover	{text-decoration:none; color:#999;}
+  #menu .spacer {
+    flex: 1;
+  }
+
+  #tt-body-index #menu a.blog,
+  #tt-body-page #menu a.blog,
+  #tt-body-category #menu a.blog,
+  #tt-body-notice #menu a.notice,
+  #tt-body-tag #menu a.tag,
+  #tt-body-location #menu a.localog,
+  #tt-body-media #menu a.media,
+  #tt-body-guestbook #menu a.guestbook {
+    font-weight:bold;
+    background-image:url(./images/red-menuback.png);
+    color:#fff;
+  }

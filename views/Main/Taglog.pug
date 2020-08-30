@@ -1,0 +1,32 @@
+s_tag: #taglog
+  h3
+  ul
+    s_tag_rep: li
+      a(href='[##_tag_link_##]' class='[##_tag_class_##]') [##_tag_name_##]
+
+style(media='screen').
+  #taglog{
+  }
+
+  #taglog h3{
+  width:200px;
+  height:21px;
+  background:url(./images/bannert.png) no-repeat;
+  }
+
+  #taglog ul{
+    margin:15px 0;
+    padding:15px;
+    border:1px dotted #DDD;
+    text-align:justify;
+    line-height:200%;
+  }
+  #taglog li	{background:none;  display:inline;}
+  #taglog a	{padding:3px 5px; color:#333;}
+  #taglog a:hover	{color:#333; text-decoration:underline;}
+  #taglog a:visited	{color:#999;}
+  #taglog li a.cloud1	{font-weight:bold;  background-color:#ffe9f6; color:#e55147;}
+  #taglog li a.cloud2	{background-color:#f4f4b9; color:#338543;}
+  #taglog li a.cloud3	{color:#3a7eeb;}
+  #taglog li a.cloud4	{color:#111; }
+  #taglog li a.cloud5	{color:#777; }

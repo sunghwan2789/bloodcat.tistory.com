@@ -1,0 +1,27 @@
+s_sidebar_element
+  //블로그 이미지와 설명
+  #blogImage
+    img(src='[##_image_##]' alt='블로그 이미지')
+    | [##_desc_##]
+    |
+    span.bloger
+      span.blogerText by
+      |
+      | [##_blogger_##]
+
+style(media='screen').
+  #blogImage{
+    margin-bottom:15px;
+  }
+  #blogImage img{
+    display: block;
+    width:240px;
+  }
+  #blogImage .bloger{
+    color:#999;
+  }
+  #blogImage .blogerText{
+    font:11px 'Trebuchet MS';
+    text-transform:uppercase;
+    letter-spacing:1px;
+  }
